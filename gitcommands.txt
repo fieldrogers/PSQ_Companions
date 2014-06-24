@@ -4,7 +4,10 @@ To get started in a new directory:
    - create a new .git folder:
 $git init
 
-To take an existing project and make it into a git repository:
+
+***************
+
+To take an existing project and make it into a git repository, or to update a repository:
    - need to add it!
 $ git add <file> # repeat for every file
 $git commit -m 'initial project version'
@@ -12,8 +15,25 @@ $git commit -m 'initial project version'
 to check the status of files:
 $git status
 
+NOTE you can commit everything without staging by using the '-a' flag in git commit!
 
-Two phases in putting a file in the repository: 1. stage it (git add) 2. commit it (git commit)
+***************
 
-To track differences:
+
+Two phases in putting a file in the repository: 1. stage it (git add) 2. commit it (git commit) (unless you commit with -a!) 
+
+To track differences: note that git diff does NOT use emacs - have to use the annoying in line editor
 $git diff #tells you what you've changed but not yet staged (added) - compares working directory to staging area
+$git diff --cached # tells you the changes that have been staged (added)
+
+********************
+
+To add to github: 
+
+this only happens the first time: 
+need to make a repository on github
+$ git remote add origin <remote repository URL>
+$git remote -v # to verify
+
+this happens every time you want to update github:
+$git push origin master
