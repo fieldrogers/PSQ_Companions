@@ -5,3 +5,15 @@ To get started in a new directory:
 $git init
 
 To take an existing project and make it into a git repository:
+   - need to add it!
+$ git add <file> # repeat for every file
+$git commit -m 'initial project version'
+
+to check the status of files:
+$git status
+
+
+Two phases in putting a file in the repository: 1. stage it (git add) 2. commit it (git commit)
+
+To track differences:
+$git diff #tells you what you've changed but not yet staged (added) - compares working directory to staging area
