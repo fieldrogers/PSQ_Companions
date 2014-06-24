@@ -11,6 +11,7 @@ To take an existing project and make it into a git repository, or to update a re
    - need to add it!
 $ git add <file> # repeat for every file
 $git commit -m 'initial project version'
+the -m flag allows you to add your comment inline
 
 to check the status of files:
 $git status
@@ -19,6 +20,7 @@ NOTE you can commit everything without staging by using the '-a' flag in git com
 
 ***************
 
+Tracking Differences:
 
 Two phases in putting a file in the repository: 1. stage it (git add) 2. commit it (git commit) (unless you commit with -a!) 
 
@@ -37,3 +39,8 @@ $git remote -v # to verify
 
 this happens every time you want to update github:
 $git push origin master
+
+*****************
+
+Branching
+
