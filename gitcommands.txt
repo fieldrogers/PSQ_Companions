@@ -44,3 +44,48 @@ $git push origin master
 
 Branching
 
+to be safe, commit everything before creating a new branch; otherwise, the new branch will start off looking like the most recent commit, and will branch from that point. 
+
+to create a new branch: 
+$git branch <new-branch-name>
+
+to switch to a different branch: 
+$git checkout <brach-name>
+
+to create a new branch and simultaneously switch to it:
+$git checkout -b <branch-name>
+
+now, if you commit, you're moving the new branch ahead! also when you open files, you're opening files from the new branch directory
+
+to determine which branch you're currently on:
+$ git branch
+or to see the last commit on each branch: 
+$git branch -v
+
+
+********************
+
+Merging
+
+the following merges FROM <branch> to master
+
+$git checkout master
+$it merge <branch>
+
+
+can then delete <branch> : 
+$git branch -d <branch>
+
+NOTE: at the bootcamp, the recommended merging into the branch, then merging this into the master for extra safety
+
+Merge conflicts:
+
+$ git mergetool
+can help walking through merge conflicts
+
+to see which branches still need to be merged (into the current branch)
+$git branch --no-merged
+
+**********************
+
+this is interesting: http://git-scm.com/book/en/Git-on-the-Server
