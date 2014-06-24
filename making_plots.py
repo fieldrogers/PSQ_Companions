@@ -3,7 +3,7 @@
 from astropy.io import fits
 import numpy as np
 import matplotlib.pyplot as plt
-all_fits = open('/../analysis/all_fits.lis')
+all_fits = open('../analysis/all_fits.lis')
 allFiles = all_fits.read()
 all_files = allFiles.split('\n')
 n = len(all_files) - 1
@@ -18,7 +18,7 @@ def get_wave(hdulist):
 	if 'CTYPE1' not in prihdr:
 		print 'CTYPE1 is not defined, fatal error'
 		return
-	ctype = prihdr['CTYPE1']
+	ctype1 = prihdr['CTYPE1']
 	# continue if linear
 	if ctype1 != 'LINEAR':
 		print 'CTYPE1 is not linear, write a new program'
@@ -55,7 +55,7 @@ for i in range(0,n):
 	filename = '../data/' + all_files[i] + '.fits'
 #	print file
 	name = all_files[i]
-	figname =  name + '.eps'
+	figname =  '../analysis/' + name + '.eps'
 	title = name
 	hdulist = fits.open(filename)
 	mydata = hdulist[0].data

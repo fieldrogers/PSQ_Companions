@@ -70,7 +70,7 @@ Merging
 the following merges FROM <branch> to master
 
 $git checkout master
-$it merge <branch>
+$git merge <branch>
 
 
 can then delete <branch> : 
