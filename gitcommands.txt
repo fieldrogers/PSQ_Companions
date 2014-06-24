@@ -1,0 +1,7 @@
+this file is a repository of useful git commands and wisdom!
+
+To get started in a new directory: 
+   - create a new .git folder:
+$git init
+
+To take an existing project and make it into a git repository:
